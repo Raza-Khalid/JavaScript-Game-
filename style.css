@@ -1,16 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-}  
-
-
-.among {
-  width: 70px;
-  height: 80px;
-  position: relative;
-  top: 320px;
-  bottom: 0px;
-} 
+}
 
 #game {
   width: 900px;
@@ -19,13 +10,29 @@
   display: block;
 }
 
+
+.among{
+  width: 60px;
+  height: 70px;
+  position: relative;
+  top: 330px;
+  bottom: 0px;
+} 
+
+@keyframes jump {
+  0%{top: 150px;}
+  30%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}
+
 .block {
   width: 20px;
-  height: 30px;
-  position: relative;
-  top: 290px;
+  height: 10px;
+  position: relative; 
+  top: 293px;
   left: 980px;
-  animation: block 2s ;
+  animation: block 2s infinite;
   background-color: black;
 
 }
@@ -36,4 +43,20 @@
 }
 
 
+.blocks {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 297px;
+  left: 980px;
+  right: 10px;
+  animation: block 4s infinite;
+  background-color: darkred;
 
+}
+
+
+@keyframes block {
+  0%{left: 880px;}
+  100%{left: -40px}
+}
