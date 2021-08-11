@@ -8,23 +8,33 @@ const block = document.getElementsByClassName('block')
 // bring the player back down to 320px
 
 function jump() {
-  among.style.top = `210px`
+  among.style.top = `230px`
 
   function down() {
-    among.style.bottom = `330px`
+    among.style.top = `330px`
   }
   // adding a timeOut method for the character, sets the duration of the jump for the character
   setTimeout(() => {
     among.style.top = `330px`
-  }, 500)
+  }, 300)
 }
 
 // function to see if the block and the character collided
-let colision = setInterval(function () {
+let checkCollision = setInterval(function () {
+  //getting among current position
   let amongTop = parseInt(
     window.getComputedStyle(among).getPropertyValue('top')
   )
-}, 5)
+
+  // getting blocks current position
+  let blockLeft = parseInt(
+    window.getComputedStyle(block).getPropertyValue('left')
+  )
+
+  if (blockLeft < 60 && blockLeft > 0 && amongTop >= 320) {
+    alert('Game Over')
+  }
+}, 10)
 
 // addEventListener for pressing the key
 // keyDOWN means the key is pressed
