@@ -13,14 +13,21 @@ function jump() {
   function down() {
     among.style.bottom = `330px`
   }
-  // adding a timeOut method for the character, sets the duration for the character
+  // adding a timeOut method for the character, sets the duration of the jump for the character
   setTimeout(() => {
     among.style.top = `330px`
   }, 500)
 }
 
-// addEventListener for for pressing the key
-// keydown means the key is pressed
+// function to see if the block and the character collided
+let colision = setInterval(function () {
+  let amongTop = parseInt(
+    window.getComputedStyle(among).getPropertyValue('top')
+  )
+}, 5)
+
+// addEventListener for pressing the key
+// keyDOWN means the key is pressed
 // number 38 is the number for the upper key
 window.addEventListener('keydown', handleKeyPress)
 function handleKeyPress(e) {
@@ -29,7 +36,7 @@ function handleKeyPress(e) {
   }
 }
 
-//keyup means the key is NOT pressed
+//keyUP means the key is NOT pressed
 window.addEventListener('keyup', handleRelease)
 function handleRelease(e) {
   if (e.keyCode === 38) {

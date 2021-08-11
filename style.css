@@ -17,6 +17,7 @@
   position: relative;
   top: 330px;
   bottom: 0px;
+  border-radius: 30px;
 } 
 
 @keyframes jump {
@@ -33,7 +34,7 @@
   top: 293px;
   left: 980px;
   animation: block 2s infinite;
-  background-color: black;
+  background-color: darkred ;
 
 }
 
