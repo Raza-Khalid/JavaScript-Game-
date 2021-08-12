@@ -31,7 +31,7 @@ let checkCollision = setInterval(function () {
     window.getComputedStyle(block).getPropertyValue('left')
   )
 
-  if (blockLeft < 60 && blockLeft > 0 && amongTop >= 320) {
+  if (blockLeft < 50 && blockLeft > 0 && amongTop >= 330) {
     alert('Game Over')
   }
 }, 10)
