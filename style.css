@@ -19,7 +19,8 @@
   background-size: 50px 50px;
 } 
 
-.block1 {
+
+.block {
   width: 20px;
   height: 10px;
   position: relative; 
@@ -29,13 +30,12 @@
   background-color: darkred;
 }
 
-@keyframes block1 {
+@keyframes blockanimation {
   0%{left: 880px;}
   100%{left: -40px}
-}
+} 
 
-
-.block2 {
+.blocksize2 {
   /* width: 20px; */
   height: 20px;
   /* position: relative; */
@@ -46,10 +46,6 @@
   /* background-color: darkred;  */
 }
 
-@keyframes block2 {
-  0%{left: 880px;}
-  100%{left: -40px}
-}
 
 button {
   padding: 5px;

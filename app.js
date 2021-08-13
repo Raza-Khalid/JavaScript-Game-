@@ -4,25 +4,29 @@ const blocks = [...document.getElementsByClassName('block')]
 const startButton = document.querySelector('.start')
 const replayButton = document.querySelector('.replay')
 const quitButton = document.querySelector('.quit')
-let interval = 2
+
 let running = false
 
 function startGame() {
+  let interval = 2
   blocks.forEach((block) => {
-    block.style.animation = 'block1 ' + interval + 's infinite linear'
+    const css = 'blockanimation ' + interval + 's infinite linear'
+    block.style.animation = css
+    console.log(css)
     interval = interval + 1
   })
+  checkCollision()
 }
-
-// button.addEventListener ('click', () => {
-
-// })
 
 function endGame() {
   blocks.forEach((block) => {
     block.style.animation = ''
   })
   interval = 2
+}
+
+function quitGame() {
+  window.close()
 }
 
 // fucntion for jump
@@ -74,10 +78,8 @@ function handleKeyPress(e) {
   }
 }
 
-startButton.addEventListener('click', () => {
-  startGame()
-  checkCollision()
-})
+startButton.addEventListener('click', startGame)
 
-// quitButton.classList.add("hide")
-// replayButton.classList.add("hide")
+replayButton.addEventListener('click', startGame)
+
+quitButton.addEventListener('click', quitGame)
