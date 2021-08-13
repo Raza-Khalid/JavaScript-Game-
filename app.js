@@ -56,8 +56,6 @@ function checkCollision() {
 
         replayButton.classList.remove('hide')
         endGame()
-
-        // alert('Game Over')
       }
     }) // getting blocks current position
   }, 10)
