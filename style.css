@@ -1,63 +1,63 @@
-#game {
-  width: 900px;
-  height: 400px;
-  border: 3px solid black;
-  display: block;
-  background-image:url(images/building.jpeg);
-  background-repeat: repeat-x;
-  margin: auto;
-  background-size: contain;
-}
+    #game {
+      width: 900px;
+      height: 400px;
+      border: 3px solid black;
+      display: block;
+      background-image:url(images/building.jpeg);
+      background-repeat: repeat-x;
+      margin: auto;
+      background-size: contain;
+    }
 
 
-.among{
-  width: 60px;
-  height: 70px;
-  position: relative;
-  top: 330px;
-  border-radius: 30px;
-  background-size: 50px 50px;
-} 
+    .among{
+      width: 60px;
+      height: 70px;
+      position: relative;
+      top: 330px;
+      border-radius: 30px;
+      background-size: 50px 50px;
+    } 
 
 
-.block {
-  width: 20px;
-  height: 10px;
-  position: relative; 
-  top: 293px;
-  left: 980px;
-  /* animation: block1 2s infinite linear; */
-  background-color: darkred;
-}
+    .block {
+      width: 20px;
+      height: 10px;
+      position: relative; 
+      top: 293px;
+      left: 980px;
+      /* animation: block1 2s infinite linear; */
+      background-color: darkred;
+    }
 
-@keyframes blockanimation {
-  0%{left: 880px;}
-  100%{left: -40px}
-} 
+    @keyframes blockanimation {
+      0%{left: 880px;}
+      100%{left: -40px}
+    } 
 
-.blocksize2 {
-  /* width: 20px; */
-  height: 20px;
-  /* position: relative; */
-  top: 297px;
-  /* left: 980px; */
-  right: 10px;
-  /* animation:  */
-  /* background-color: darkred;  */
-}
+    .blocksize2 {
+      /* width: 20px; */
+      height: 20px;
+      /* position: relative; */
+      top: 297px;
+      /* left: 980px; */
+      right: 10px;
+      /* animation:  */
+      /* background-color: darkred;  */
+    }
 
 
-button {
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 19%;
-  cursor: pointer;
-  align-content:flex-start;
-  background-color: yellow;
-  /* visibility:hidden */
+    button {
+      padding: 5px;
+      font-size: 15px;
+      border-radius: 19%;
+      cursor: pointer;
+      align-content:flex-start;
+      background-color: yellow;
+      /* visibility:hidden */
 
-}
+    }
 
-.hide {
-display: none;
-}
+    .hide {
+    display: none;
+    }

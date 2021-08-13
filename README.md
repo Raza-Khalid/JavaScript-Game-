@@ -38,7 +38,10 @@ JUMP IT!!! A simple yet super entertaining game to play. Your goal is to save Am
 
 > ***Credits*** 
 * [Poki Link](https://poki.com/en/g/dinosaur-game
-          "Dinosaur Game")
+"Dinosaur Game")
+* [Building Background Pic](https://unsplash.com/s/photos/black-and-white-building) 
+* [Among Us Pic](https://static.wikia.nocookie.net/gametoons-among-us/images/1/15/Angel_Jumping.png/revision/latest/scale-to-width-down/250?cb=20210410003939)
+
 
 
 
