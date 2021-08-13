@@ -1,23 +1,28 @@
 const among = document.querySelector('.among')
 const blocks = [...document.getElementsByClassName('block')]
-// const buttons = [...document.querySelector('button')]
+// const button = [...document.querySelectorAll('button')]
+const startButton = document.querySelector('.start')
+const replayButton = document.querySelector('.replay')
+const quitButton = document.querySelector('.quit')
 let interval = 2
-let running = true
+let running = false
 
-function start() {
+function startGame() {
   blocks.forEach((block) => {
-    block.style.animation = 'block ' + interval + 's infinite linear'
+    block.style.animation = 'block1 ' + interval + 's infinite linear'
     interval = interval + 1
   })
-  // buttons.forEach(buttons => {
-
-  // });
 }
 
-function end() {
+// button.addEventListener ('click', () => {
+
+// })
+
+function endGame() {
   blocks.forEach((block) => {
     block.style.animation = ''
   })
+  interval = 2
 }
 
 // fucntion for jump
@@ -32,30 +37,33 @@ function jump() {
     among.style.top = `330px`
   }, 300)
 }
+
 function down() {
   among.style.top = `330px`
 }
 
 // function to see if the block and the character collided
-let checkCollision = setInterval(function () {
-  //getting among current position
-  let amongTop = parseInt(
-    window.getComputedStyle(among).getPropertyValue('top')
-  )
-  // getting blocks current position
-  blocks.forEach((block) => {
-    let blockLeft = parseInt(
-      window.getComputedStyle(block).getPropertyValue('left')
+function checkCollision() {
+  setInterval(function () {
+    //getting among current position
+    let amongTop = parseInt(
+      window.getComputedStyle(among).getPropertyValue('top')
     )
-    if (blockLeft < 40 && blockLeft > 0 && amongTop >= 330) {
-      console.log(blockLeft, amongTop)
-      running = false
-      end()
-      // alert('Game Over')
-    }
-  })
-}, 10)
+    blocks.forEach((block) => {
+      let blockLeft = parseInt(
+        window.getComputedStyle(block).getPropertyValue('left')
+      )
+      if (blockLeft < 40 && blockLeft > 0 && amongTop >= 330) {
+        running = false
 
+        replayButton.classList.remove('hide')
+        endGame()
+
+        // alert('Game Over')
+      }
+    }) // getting blocks current position
+  }, 10)
+}
 // addEventListener for pressing the key
 // keyDOWN means the key is pressed
 // number 38 is the number for the upper key
@@ -66,10 +74,10 @@ function handleKeyPress(e) {
   }
 }
 
-// //keyUP means the key is NOT pressed
-// window.addEventListener('keyup', handleRelease)
-// function handleRelease(e) {
-//   if (e.keyCode === 38) {
-//     down()
-//   }
-// }
+startButton.addEventListener('click', () => {
+  startGame()
+  checkCollision()
+})
+
+// quitButton.classList.add("hide")
+// replayButton.classList.add("hide")

@@ -1,17 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 #game {
   width: 900px;
   height: 400px;
   border: 3px solid black;
   display: block;
-  /* background-image:url(images/building.jpeg); */
+  background-image:url(images/building.jpeg);
   background-repeat: repeat-x;
   margin: auto;
-  position: absolute;
+  background-size: contain;
 }
 
 
@@ -24,24 +19,23 @@
   background-size: 50px 50px;
 } 
 
-.block {
+.block1 {
   width: 20px;
   height: 10px;
   position: relative; 
   top: 293px;
   left: 980px;
-  /* animation: block 2s infinite linear; */
-  background-color: darkred ;
-
+  /* animation: block1 2s infinite linear; */
+  background-color: darkred;
 }
 
-@keyframes block {
+@keyframes block1 {
   0%{left: 880px;}
   100%{left: -40px}
 }
 
 
-.blocks {
+.block2 {
   /* width: 20px; */
   height: 20px;
   /* position: relative; */
@@ -50,21 +44,24 @@
   right: 10px;
   /* animation:  */
   /* background-color: darkred;  */
-
 }
 
-
-@keyframes block {
+@keyframes block2 {
   0%{left: 880px;}
   100%{left: -40px}
 }
 
 button {
-  background-color:red;
-  cursor: pointer;
-  text-align: center;
-  font-size: 15px;
   padding: 5px;
-  border-radius: 50%;
+  font-size: 15px;
+  border-radius: 19%;
+  cursor: pointer;
+  align-content:flex-start;
+  background-color: yellow;
+  /* visibility:hidden */
+
 }
 
+.hide {
+display: none;
+}
