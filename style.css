@@ -45,14 +45,7 @@
       right: 10px;
     }
 
-    .start {
-      padding: 2px;
-      background-color: yellow;
-      border-radius: 50%;
-      font-size: 15px;
-    }
-
-    .replay {
+    .btn {
       padding: 2px;
       background-color: yellow;
       border-radius: 50%;

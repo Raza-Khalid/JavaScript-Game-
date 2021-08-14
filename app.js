@@ -1,8 +1,8 @@
 const among = document.querySelector('.among')
 const blocks = [...document.getElementsByClassName('block')]
-const startButton = document.querySelector('.start')
-const replayButton = document.querySelector('.replay')
-const quitButton = document.querySelector('.quit')
+const startButton = document.getElementById('btnStart')
+const replayButton = document.getElementById('btnReplay')
+const quitButton = document.getElementById('btnQuit')
 let running = false
 
 // start game function
@@ -25,7 +25,7 @@ function endGame() {
 }
 //Quit Game function
 function quitGame() {
-  window.close()
+  window.history.back()
 }
 
 //when up key pressed, change the top to 300px and 300ms sec later bring the player back down to 320px
