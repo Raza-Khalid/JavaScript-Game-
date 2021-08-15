@@ -25,7 +25,8 @@ function endGame() {
 }
 //Quit Game function
 function quitGame() {
-  window.history.back()
+  //window.location = 'index.html'
+  window.close()
 }
 
 //when up key pressed, change the top to 300px and 300ms sec later bring the player back down to 320px
